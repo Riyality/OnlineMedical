@@ -75,7 +75,7 @@ background-color: gray;
   <td>${med12.supplierName}</td>
   <td>${med12.contactNumber}</td>
   <td>${med12.address}</td>
-   <td data-th="Movie Title"><button type="button" data-toggle="modal" data-target="#exampleModal" ><i class="fa-solid fa-pencil"  ></i></button></td>
+   <td data-th="Movie Title"><button type="button" data-toggle="modal" data-target="#exampleModal" value="click" ><i class="fas fa-pencil-alt"></i></button></td>
 
 
 </tr>

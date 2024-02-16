@@ -11,19 +11,19 @@ import com.jut.entity.Supplier;
 @Service
 public class SupplierService {
 	@Autowired
-	SupplierDao supplierdao;
+	SupplierDao supplierDao;
 	
-	public void Suppliers(Supplier s) {
-		supplierdao.Suppliers(s);
+	public void add(Supplier supplier) {
+		supplierDao.add(supplier);
 	}
 
-	public List<Supplier> Allsupplier() {
+	public List<Supplier> list() {
 		
-		return supplierdao.Allsupplier();
+		return supplierDao.list();
 	}
 
-	public void supplierupdate(Supplier s) {
-		supplierdao.supplierupdate(s);
+	public void supplierupdate(Supplier supplier) {
+		supplierDao.supplierupdate(supplier);
 		
 	}
 }

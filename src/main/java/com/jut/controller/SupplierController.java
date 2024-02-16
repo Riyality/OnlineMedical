@@ -14,40 +14,40 @@ import com.jut.service.SupplierService;
 @Controller
 public class SupplierController {
 	@Autowired
-	SupplierService supplier;
+	SupplierService supplierService;
 	
 	
 	@RequestMapping("Supplier")
 	public String supplier(){
-		return "Supplier";
+		return "supplier/add";
 	}
 	
 	
 	@RequestMapping("/supplier")
-	public String Suppliers(@ModelAttribute Supplier s){
+	public String add(@ModelAttribute Supplier supplier){
 		
-		supplier. Suppliers(s);
+		supplierService. add(supplier);
 		
-		return "Supplier";
+		return "supplier/add";
 	}
 	
 	@RequestMapping("/allsuppliers")
-	public String Allsupplier( Model model){
-		List<Supplier> list1=supplier.Allsupplier();
+	public String list( Model model){
+		List<Supplier> list1=supplierService.list();
 		model.addAttribute("supplierList", list1);
 		
 		
-		return "AllSuppliers";
+		return "supplier/list";
 		
 	}
 	
 	@RequestMapping("/update")
-	public String supplierupdate(@ModelAttribute Supplier s, Model m){
+	public String supplierupdate(@ModelAttribute Supplier supplier, Model model){
 		
-		supplier.supplierupdate(s);
+		supplierService.supplierupdate(supplier);
 		
 		
-		return "AllSuppliers";
+		return "supplier/list";
 		
 	}
 	

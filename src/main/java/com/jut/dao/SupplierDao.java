@@ -14,36 +14,16 @@ public class SupplierDao {
 	@Autowired
 	JdbcTemplate template;
 	
-
-	public boolean login(String user, String password) {
-		//Object [] args={user,password};
-		//System.out.println(user);
-		Integer r=template.queryForObject("select count(*) from login where username=? and password=?",Integer.class,user,password);
-		System.out.println(r);
-		
-		if(r==1){
-			
-			return true;
-		}
-		else{
-			return false;
-		}
-		
-	}
-
-
-	public void Suppliers(Supplier s) {
-		Object [] args={s.getSupplierId(),s.getSupplierName(),s.getContactNumber(),s.getAddress()};
-		int a=template.update("insert into supplier values(?,?,?,?)",args);
+	public void add(Supplier supplier) {
+		Object [] argument = {supplier.getSupplierId(),supplier.getSupplierName(),supplier.getContactNumber(),supplier.getAddress()};
+		int a=template.update("insert into supplier values(?,?,?,?)",argument);
 		System.out.println(a);
-		
-		
+			
 	}
 
-	
-	public List<Supplier> Allsupplier() {
+	public List<Supplier> list() {
 		try {
-			List<Supplier> s=template.query("select* from supplier ",new RowMapper<Supplier>(){
+			List<Supplier> supplier = template.query("select* from supplier ",new RowMapper<Supplier>(){
 
 				public Supplier mapRow(ResultSet rs, int arg1) throws SQLException {
 					
@@ -51,10 +31,8 @@ public class SupplierDao {
 				}
 				
 			});
-			return s;
+			return supplier;
 
-		
-		
 			} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -62,9 +40,10 @@ public class SupplierDao {
 
 	}
 
-	public void supplierupdate(Supplier s) {
-		Object [] arg={s.getSupplierName(),s.getContactNumber(),s.getAddress(),s.getSupplierId()};
-		int a=template.update("update  supplier set supplierName=?,contactNumber=?,address=? where supplierId=? ",arg);
+	public void supplierupdate(Supplier supplier) {
+		
+		Object [] argument = {supplier.getSupplierName(),supplier.getContactNumber(),supplier.getAddress(),supplier.getSupplierId()};
+		int a = template.update("update  supplier set supplierName=?,contactNumber=?,address=? where supplierId=? ",argument);
 		System.out.println(a);
 	}
 

@@ -1,29 +1,35 @@
 package com.jut.service;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.jut.dao.MedicineDao;
 import com.jut.entity.Medicine;
 
 @Service
 public class MedicineService {
 	@Autowired
-	MedicineDao md;
+	MedicineDao medicineDao;
 
-	public void medicine(Medicine m) {
-		md.medicine(m);
+	public void add(Medicine medicine) {
+		medicineDao.add(medicine);
 
 	}
 
-	public List<Medicine> Allmedicine() {
+	public List<Medicine> list() {
 		
-		return md.Allmedicine();
+		return medicineDao.list();
+	}
+/*
+	public void medicineupdate(Medicine medicine) {
+		medicineDao.medicineupdate(medicine);
+	}
+
+	*/
+
+	public void update(Medicine medicine) {
+		medicineDao.update(medicine);
+		
 	}
 
 	
-	
-
 }
