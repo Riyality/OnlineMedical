@@ -1,4 +1,4 @@
-<%@include file="../jsp/modules/header.jsp"%>
+<%@include file="../../jsp/modules/header.jsp"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
  
@@ -82,4 +82,4 @@ h3{
 
 
 </body>
-<%@include file="../jsp/modules/footer.jsp"%>
+<%@include file="../../jsp/modules/footer.jsp"%>
