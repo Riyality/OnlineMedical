@@ -13,17 +13,24 @@ public class SupplierService {
 	@Autowired
 	SupplierDao supplierdao;
 	
-	public void Suppliers(Supplier s) {
-		supplierdao.Suppliers(s);
+	public void add(Supplier supplier) {
+		supplierdao.add(supplier);
 	}
 
-	public List<Supplier> Allsupplier() {
+	public List<Supplier> list() {
 		
-		return supplierdao.Allsupplier();
+		return supplierdao.list();
 	}
 
-	public void supplierupdate(Supplier s) {
-		supplierdao.supplierupdate(s);
+	public boolean delete(int supplierId) {
 		
+		return supplierdao.delete( supplierId) ;
 	}
+
+	public boolean update(Supplier supplier) {
+		
+		return supplierdao.update(supplier);
+	}
+
+
 }

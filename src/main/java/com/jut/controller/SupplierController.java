@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
 
 import com.jut.entity.Supplier;
 import com.jut.service.SupplierService;
@@ -14,41 +17,65 @@ import com.jut.service.SupplierService;
 @Controller
 public class SupplierController {
 	@Autowired
-	SupplierService supplier;
+	SupplierService supplierService;
 	
 	
 	@RequestMapping("Supplier")
 	public String supplier(){
-		return "Supplier";
+		return "supplier/add";
 	}
 	
 	
 	@RequestMapping("/supplier")
-	public String Suppliers(@ModelAttribute Supplier s){
+	public String add(@ModelAttribute Supplier supplier){
 		
-		supplier. Suppliers(s);
+		supplierService. add(supplier);
 		
-		return "Supplier";
+		return "redirect:/allsuppliers";
 	}
 	
 	@RequestMapping("/allsuppliers")
-	public String Allsupplier( Model model){
-		List<Supplier> list1=supplier.Allsupplier();
+	public String list( Model model){
+		List<Supplier> list1=supplierService.list();
 		model.addAttribute("supplierList", list1);
 		
 		
-		return "AllSuppliers";
+		return "supplier/list";
 		
 	}
 	
-	@RequestMapping("/update")
-	public String supplierupdate(@ModelAttribute Supplier s, Model m){
-		
-		supplier.supplierupdate(s);
-		
-		
-		return "AllSuppliers";
-		
+	
+	@RequestMapping("update")
+	public String update(){
+		return "supplier/list";
 	}
 	
-}
+	@RequestMapping("/Update")
+	public String update(@ModelAttribute Supplier supplier, Model model){
+		
+	boolean isAdded=supplierService.update(supplier);
+	
+	return "redirect:/allsuppliers";
+
+	}
+	
+	
+	@RequestMapping("/DeleteSupplier")
+		public String Delete(@RequestParam int supplierId, Model model ){
+			boolean isDeleted=supplierService.delete(supplierId);
+			if(isDeleted){
+				model.addAttribute("successMsg","Supplier deleted Successfully");
+			}
+			else{
+				model.addAttribute("errorMsg","Supplier deleted Successfully");
+			}
+			return "redirect:/allsuppliers";
+			
+			/*return "supplier/list";*/
+
+		}
+	}
+
+
+	
+

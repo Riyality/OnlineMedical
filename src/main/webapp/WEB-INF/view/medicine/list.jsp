@@ -9,14 +9,23 @@
    
   <style type="text/css">
 
+
+
  
 table{
-border-collapse: collapse;
+ border-collapse: collapse; 
 text-align: center;
 width: 70%;
 margin-left:275px;
 margin-top: 50px;
+border:1px solid ;
 }
+
+
+table,tr,th,td{
+border:1px solid black;
+}
+
 body{
 margin-bottom:3000px;
 }
@@ -51,6 +60,7 @@ h3{
 </style>
  
 <body>
+
 
 <table border="6">
 <tr>
