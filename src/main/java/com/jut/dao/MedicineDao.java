@@ -20,9 +20,11 @@ public class MedicineDao {
 
 	public void add(Medicine medicine) {
 	Object [] argument = { medicine.getMedicineId(),medicine.getMedicineName(),medicine.getRate(),medicine.getManufacturer(),medicine.getExpiryDate() };
-	int a = template.update("insert into medicine values(?,?,?,?,?)",argument);
-	System.out.println(a);
-	}
+	int result = template.update("insert into medicine values(?,?,?,?,?)",argument);
+	System.out.println(result);
+	
+}
+	
 
 	public List<Medicine> list() {
 		try {
@@ -43,19 +45,32 @@ public class MedicineDao {
 		return null;
 	}
 
-	public void update(Medicine medicine) {
+	public boolean update(Medicine medicine) {
+		try{
 		Object [] argument = {medicine.getMedicineName(),medicine.getRate(),medicine.getManufacturer(),medicine.getExpiryDate(),medicine.getMedicineId()};
-		int a = template.update("update medicine set medicineName=?,rate=?,manufacturer=?,expiryDate=? where medicineId=? ",argument);
-		System.out.println(a);
+		String result = "UPDATE medicine SET MedicineName=?,Rate=?,Manufacturer=?,ExpiryDate=? WHERE MedicineId=?";
+		int value =template.update(result, argument);
+		if(value==1){
+			return true;
+		}else{
+			return false;
+		}
 	}
-
+	catch(Exception e2){
+		return false;
 	
-	/*public void medicineupdate(Medicine medicine) {
-		Object [] argument = {medicine.getMedicineName(),medicine.getRate(),medicine.getManufacturer(),medicine.getExpiryDate(),medicine.getMedicineId()};
-		int a = template.update("update  medicine set medicinename=?,rate=?,Manufacturer=?,ExpiryDate=? where MedicineId=? ",argument);
-		System.out.println(a);
-		
 	}
-*/
+}
+	
+	public void delete(int medicineId) {
+		Object []argument = {medicineId};
+		int result = template.update("delete from medicine where medicineId = ?",argument);
+		System.out.println(result);
+	}
 
 }
+
+	
+
+
+

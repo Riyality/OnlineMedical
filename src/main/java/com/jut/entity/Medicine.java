@@ -3,12 +3,13 @@ package com.jut.entity;
 import java.util.Date;
 
 public class Medicine {
-	int medicineId;
-	String medicineName;
-	String rate;
-	String manufacturer;
-	String expiryDate;
-	public Medicine(){}
+	private int medicineId;
+	private String medicineName;
+	private String rate;
+	private String manufacturer;
+	private String expiryDate;
+	
+	
 	public Medicine(int medicineId, String medicineName, String rate, String manufacturer, String expiryDate) {
 		super();
 		this.medicineId = medicineId;
@@ -17,6 +18,14 @@ public class Medicine {
 		this.manufacturer = manufacturer;
 		this.expiryDate = expiryDate;
 	}
+	
+	
+	public Medicine() {
+		super();
+		
+	}
+	
+	
 	public int getMedicineId() {
 		return medicineId;
 	}
@@ -48,11 +57,8 @@ public class Medicine {
 		this.expiryDate = expiryDate;
 	}
 	
+
 	
 	
-	
-	
-	
-	
-	
+
 }

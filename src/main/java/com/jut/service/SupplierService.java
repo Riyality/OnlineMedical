@@ -22,8 +22,13 @@ public class SupplierService {
 		return supplierDao.list();
 	}
 
-	public void supplierupdate(Supplier supplier) {
-		supplierDao.supplierupdate(supplier);
+	public void update(Supplier supplier) {
+		supplierDao.update(supplier);
 		
+	}
+
+	public void delete(int supplierId) {
+		
+		supplierDao.delete(supplierId);
 	}
 }

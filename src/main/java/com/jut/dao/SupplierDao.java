@@ -16,8 +16,8 @@ public class SupplierDao {
 	
 	public void add(Supplier supplier) {
 		Object [] argument = {supplier.getSupplierId(),supplier.getSupplierName(),supplier.getContactNumber(),supplier.getAddress()};
-		int a=template.update("insert into supplier values(?,?,?,?)",argument);
-		System.out.println(a);
+		int result = template.update("insert into supplier values(?,?,?,?)",argument);
+		System.out.println(result);
 			
 	}
 
@@ -40,12 +40,16 @@ public class SupplierDao {
 
 	}
 
-	public void supplierupdate(Supplier supplier) {
+	public void update(Supplier supplier) {
 		
 		Object [] argument = {supplier.getSupplierName(),supplier.getContactNumber(),supplier.getAddress(),supplier.getSupplierId()};
-		int a = template.update("update  supplier set supplierName=?,contactNumber=?,address=? where supplierId=? ",argument);
-		System.out.println(a);
+		int result = template.update("update  supplier set supplierName=?,contactNumber=?,address=? where supplierId=? ",argument);
+		System.out.println(result);
 	}
 
-
+	public void delete(int supplierId) {
+	Object []argument = {supplierId};
+	int result = template.update("delete from supplier where supplierId = ?",argument);
+	System.out.println(result);
+}
 }

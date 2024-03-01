@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jut.entity.Medicine;
 
@@ -27,7 +29,7 @@ public class MedicineController {
 		return "medicine/add";
 		
 	}
-	@RequestMapping("/allmedi")
+	@RequestMapping("/allmedicine")
 	public String list( Model model){
 		List<Medicine> list1=medicineService.list();
 		model.addAttribute("MedicineList", list1);
@@ -36,20 +38,33 @@ public class MedicineController {
 		return "medicine/list";
 	}	
 
-	/*@RequestMapping("/update")
-	public String medicineupdate(@ModelAttribute Medicine medicine, Model model){
-		
-		medicineService.medicineupdate(medicine);
-		
-		
-		return "medicine/list";
-		
-	}*/
-	@RequestMapping("/updates")
+
+	/*@RequestMapping("/updates")
 	public String update(@ModelAttribute Medicine medicine,Model model){
 		medicineService.update(medicine);
-		return "medicine/list";
+		return "medicine/update";
+	}*/
+	@RequestMapping("updatemedicine")
+	public String update(){
+		return "medicine/update";
 	}
 	
+	@RequestMapping(value="/editmedicine",method=RequestMethod.POST)
+	public String update(@ModelAttribute Medicine medicine,Model model){
+		boolean isAdded=medicineService.update(medicine);
+		if(isAdded){
+			model.addAttribute("msg","update succesfully");
+		}else
+		{
+			model.addAttribute("error","not succesfully");
+			
+		}
+		return "redirect:/allmedicine";
+	}
 	
+	@RequestMapping("/deletes")
+	public String delete(@RequestParam int medicineId, Model model){
+		medicineService.delete(medicineId);
+		return "redirect:/allmedicine";
+	}
 }

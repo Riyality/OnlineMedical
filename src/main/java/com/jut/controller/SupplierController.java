@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jut.entity.Supplier;
 import com.jut.service.SupplierService;
@@ -41,14 +42,26 @@ public class SupplierController {
 		
 	}
 	
-	@RequestMapping("/update")
-	public String supplierupdate(@ModelAttribute Supplier supplier, Model model){
+	@RequestMapping("update")
+	public String update(){
+		return "supplier/update";
+	}
+	
+	
+	@RequestMapping("/edit")
+	public String update(@ModelAttribute Supplier supplier, Model model){
 		
-		supplierService.supplierupdate(supplier);
+		supplierService.update(supplier);
 		
 		
-		return "supplier/list";
+		return "redirect:/allsuppliers";
 		
+	}
+	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam int supplierId, Model model){
+		supplierService.delete(supplierId);
+		return "redirect:/allsuppliers";
 	}
 	
 }

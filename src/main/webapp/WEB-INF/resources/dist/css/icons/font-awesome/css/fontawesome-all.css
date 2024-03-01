@@ -418,6 +418,8 @@ readers do not read off random characters that represent icons */
 .fa-baseball-ball:before {
   content: "\f433"; }
 
+
+
 .fa-basketball-ball:before {
   content: "\f434"; }
 
@@ -597,6 +599,10 @@ readers do not read off random characters that represent icons */
 
 .fa-caret-down:before {
   content: "\f0d7"; }
+
+.fa-solid fa-trash-can-arrow-up:before {
+  content: "\f0d7"; }
+
 
 .fa-caret-left:before {
   content: "\f0d9"; }
@@ -2607,6 +2613,8 @@ readers do not read off random characters that represent icons */
 
 .fa-untappd:before {
   content: "\f405"; }
+  
+  
 
 .fa-upload:before {
   content: "\f093"; }

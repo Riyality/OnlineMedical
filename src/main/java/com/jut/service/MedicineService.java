@@ -2,6 +2,8 @@ package com.jut.service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
 import com.jut.dao.MedicineDao;
 import com.jut.entity.Medicine;
 
@@ -19,17 +21,22 @@ public class MedicineService {
 		
 		return medicineDao.list();
 	}
-/*
-	public void medicineupdate(Medicine medicine) {
-		medicineDao.medicineupdate(medicine);
+
+	
+
+	public boolean update(Medicine medicine) {
+		// TODO Auto-generated method stub
+		return medicineDao.update(medicine);
 	}
 
-	*/
 
-	public void update(Medicine medicine) {
-		medicineDao.update(medicine);
+public void delete(int medicineId) {
 		
+	medicineDao.delete(medicineId);
 	}
+
+	
+	
 
 	
 }
