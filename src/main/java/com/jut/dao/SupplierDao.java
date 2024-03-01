@@ -32,18 +32,18 @@ public class SupplierDao {
 	}
 
 
-	public void Suppliers(Supplier s) {
-		Object [] args={s.getSupplierId(),s.getSupplierName(),s.getContactNumber(),s.getAddress()};
-		int a=template.update("insert into supplier values(?,?,?,?)",args);
+	public void add(Supplier supplier) {
+		Object [] argument={supplier.getSupplierId(),supplier.getSupplierName(),supplier.getContactNumber(),supplier.getAddress()};
+		int a=template.update("insert into supplier values(?,?,?,?)",argument);
 		System.out.println(a);
 		
 		
 	}
 
 	
-	public List<Supplier> Allsupplier() {
+	public List<Supplier> list() {
 		try {
-			List<Supplier> s=template.query("select* from supplier ",new RowMapper<Supplier>(){
+			List<Supplier> supplier=template.query("select* from supplier ",new RowMapper<Supplier>(){
 
 				public Supplier mapRow(ResultSet rs, int arg1) throws SQLException {
 					
@@ -51,7 +51,7 @@ public class SupplierDao {
 				}
 				
 			});
-			return s;
+			return supplier;
 
 		
 		
@@ -62,11 +62,42 @@ public class SupplierDao {
 
 	}
 
-	public void supplierupdate(Supplier s) {
-		Object [] arg={s.getSupplierName(),s.getContactNumber(),s.getAddress(),s.getSupplierId()};
-		int a=template.update("update  supplier set supplierName=?,contactNumber=?,address=? where supplierId=? ",arg);
-		System.out.println(a);
+
+	public boolean update(Supplier supplier) {
+		try{
+		Object [] argument={supplier.getSupplierId(),supplier.getSupplierName(),supplier.getContactNumber(),supplier.getAddress()};
+		int result=template.update("update  supplier set SupplierName=?,ContactNumber=?,Address=? where SupplierId=? ",argument);
+		System.out.println(result);
+		
+		if(result==1){
+			return true;
+		}
+		
+		
+		}catch(Exception e){
+		e.printStackTrace();
+		
+		}
+		return false;
+		
+		
+
+		
 	}
 
 
+
+public boolean delete(int supplierId){
+	try{
+		Object[] args={supplierId};
+		int result=template.update("delete from  supplier  where SupplierId=?",args);
+		if(result==1){
+			return true;
+		}
+		
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+	return false;
+}
 }

@@ -18,13 +18,13 @@ public class MedicineController {
 	
 	@RequestMapping("medicine")
 	public String medicine(){
-		return "medicine";
+		return "medicine/add";
 		
 	}
 	@RequestMapping("/Medicine")
 	public String medicine(@ModelAttribute Medicine m){
 		medicine.medicine(m);
-		return "medicine";
+		return "medicine/add";
 		
 	}
 	@RequestMapping("/allmedi")
@@ -33,7 +33,7 @@ public class MedicineController {
 		model.addAttribute("MedicineList", list1);
 		
 		
-		return "Allmedicine";
+		return "medicine/list";
 	}	
 	
 	

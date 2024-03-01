@@ -3,6 +3,36 @@
 <!-- Mirrored from themewagon.github.io/matrix-admin/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Feb 2024 10:25:00 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>Preskool - Dashboard</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" href="resources/assets/img/favicon.png">
+		
+		<!-- Fontfamily -->
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
+		
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
+		
+		<!-- Feathericon CSS -->
+        <link rel="stylesheet" href="resources/assets/plugins/feather/feather.css">
+		
+		<!-- Pe7 CSS -->
+		<link rel="stylesheet" href="resources/assets/plugins/icons/flags/flags.css">
+		
+		<!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="resources/assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="resources/assets/plugins/fontawesome/css/all.min.css">
+
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="resources/assets/css/style.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -194,7 +224,29 @@
 								style="color: black; font-size: 20px; font-weight: 900;">
 									All Suppliers </span></a></li>
 					</ul></li>				                       <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="charts.html" aria-expanded="false"><i class="fas fa-shopping-cart" style="color:black"></i><span class="hide-menu" style="color: black; font-size: 20px; font-weight: 900;">Purchase</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="widgets.html" aria-expanded="false"><i class="fa-solid fa-users"  style="color:black"></i><span class="hide-menu" style="color: black; font-size: 20px; font-weight: 900;">Customers</span></a></li>
+                       		
+                       		
+                       		<li class="sidebar-item"><a
+					class="sidebar-link has-arrow waves-effect waves-dark"
+					href="javascript:void(0)" aria-expanded="false" style="color:black"><i
+						class="mdi mdi-receipt" style="color:black"></i><span class="hide-menu"
+						style="color: black; font-size: 20px; font-weight: 900;">Customer</a>
+					<ul aria-expanded="false" class="collapse  first-level"  style="background-color:white;">
+						<li class="sidebar-item"><a href="AddCustomer"
+							class="sidebar-link"><i class="mdi mdi-note-outline"  style="color:black"></i><span
+								class="hide-menu"
+								style="color: black; font-size: 20px; font-weight: 900;">
+									Add Customer </span></a></li>
+						 <li class="sidebar-item"><a href="allCustomer"
+							class="sidebar-link"><i class="mdi mdi-note-plus"  style="color:black"></i><span
+								class="hide-menu"
+								style="color: black; font-size: 20px; font-weight: 900;">
+								All Customer </span></a></li>
+ 				</ul></li>
+
+                        
+									
+									
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="tables.html" aria-expanded="false"><i class="mdi mdi-border-inside"  style="color:black"></i><span class="hide-menu" style="color: black; font-size: 20px; font-weight: 900;">Sale</span></a></li>
 
 				<li class="sidebar-item"><a

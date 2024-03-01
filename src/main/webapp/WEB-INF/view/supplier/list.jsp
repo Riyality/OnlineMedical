@@ -1,4 +1,4 @@
-<%@include file="../../jsp/modules/header.jsp"%>
+     <%@include file="../../jsp/modules/header.jsp"%>
 <%@ page isELIgnored="false"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
  
@@ -123,3 +123,4 @@ background-color: gray;
 
 </body>
 <%@include file="../../jsp/modules/footer.jsp"%>
+     

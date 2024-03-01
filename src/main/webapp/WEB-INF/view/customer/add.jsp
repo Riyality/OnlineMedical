@@ -158,27 +158,23 @@ form .user-details .input-box{
        </head>
 <body>
 <div class="container">
-        <div class="title">Suppliers</div>
+        <div class="title">Customer</div>
         <div class="content">
-          <form action="supplier" method="POST">
+          <form action="addCustomer" method="POST">
             <div class="user-details">
-<!--               <div class="input-box">
-                <span class="details">Supplier Id:</span>
-                <input type="text" placeholder="Enter your supplier id" name="SupplierId" required>
+               <div class="input-box">
+                <span class="details">Customer Id:</span>
+                <input type="text"  name="CustomerId" required>
               </div>
- -->              <div class="input-box">
-                <span class="details">Supplier Name:</span>
-                <input type="text"  name="SupplierName" required>
+            <div class="input-box">
+                <span class="details">Customer Name:</span>
+                <input type="text"  name="CustomerName" required>
               </div>
               <div class="input-box">
                 <span class="details">Contact No:</span>
                 <input type="text"  name="ContactNumber" required>
               </div>
-              <div class="input-box">
-                <span class="details">Address:</span>
-                <input type="text"  name="Address" required>
-              </div> 
-             
+              
           
             <div class="button">
               <input type="submit" value="Submit">
