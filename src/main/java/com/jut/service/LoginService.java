@@ -9,11 +9,11 @@ import com.jut.dao.LoginDao;
 public class LoginService {
 	
 	@Autowired
-	 LoginDao dao;
+	 LoginDao loginDao;
 	
 	public boolean login(String user, String password) {
 
-		return dao.login(user, password);
+		return loginDao.login(user, password);
 
 	}
 
