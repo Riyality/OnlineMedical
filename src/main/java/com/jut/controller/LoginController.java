@@ -1,19 +1,9 @@
 package com.jut.controller;
-
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.jut.entity.Medicine;
 import com.jut.service.LoginService;
-import com.jut.service.MedicineService;
-import com.sun.org.apache.regexp.internal.REDebugCompiler;
 
 @Controller
 public class LoginController {
@@ -24,6 +14,10 @@ public class LoginController {
 	public String login(){
 		return "login";
 		
+	}
+	@RequestMapping("index")
+	public String index(){
+		return "index";
 	}
 	
 	@RequestMapping(value="/login")
@@ -40,9 +34,5 @@ public class LoginController {
 	
 }
 	
-
-	@RequestMapping("index")
-	public String index(){
-		return "index";
-	}
+	
 }

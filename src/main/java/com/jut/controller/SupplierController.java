@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jut.entity.Supplier;
 import com.jut.service.SupplierService;
@@ -14,41 +15,53 @@ import com.jut.service.SupplierService;
 @Controller
 public class SupplierController {
 	@Autowired
-	SupplierService supplier;
+	SupplierService supplierService;
 	
 	
 	@RequestMapping("Supplier")
 	public String supplier(){
-		return "Supplier";
+		return "supplier/add";
 	}
 	
 	
 	@RequestMapping("/supplier")
-	public String Suppliers(@ModelAttribute Supplier s){
+	public String add(@ModelAttribute Supplier supplier){
 		
-		supplier. Suppliers(s);
+		supplierService. add(supplier);
 		
-		return "Supplier";
+		return "supplier/add";
 	}
 	
 	@RequestMapping("/allsuppliers")
-	public String Allsupplier( Model model){
-		List<Supplier> list1=supplier.Allsupplier();
+	public String list( Model model){
+		List<Supplier> list1=supplierService.list();
 		model.addAttribute("supplierList", list1);
 		
 		
-		return "AllSuppliers";
+		return "supplier/list";
 		
 	}
 	
-	@RequestMapping("/update")
-	public String supplierupdate(@ModelAttribute Supplier s, Model m){
+	@RequestMapping("update")
+	public String update(){
+		return "supplier/update";
+	}
+	
+	
+	@RequestMapping("/edit")
+	public String update(@ModelAttribute Supplier supplier, Model model){
 		
-		supplier.supplierupdate(s);
+		supplierService.update(supplier);
 		
 		
-		return "AllSuppliers";
+		return "redirect:/allsuppliers";
 		
+	}
+	
+	@RequestMapping("/delete")
+	public String delete(@RequestParam int supplierId, Model model){
+		supplierService.delete(supplierId);
+		return "redirect:/allsuppliers";
 	}
 	
 }

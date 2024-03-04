@@ -1,6 +1,7 @@
-<%@include file="../jsp/modules/header.jsp"%>
-<style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+<%@include file="../../jsp/modules/header.jsp"%>
+<%@ page isELIgnored="false"%>
+ <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -8,21 +9,19 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-
+ 
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#00aaff;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
-
+ 
+ background-color:#e6f7ff;
 }
 .container{
+  max-width: 650px;
  margin-top:70px;
- margin-left:280px;
-  max-width: 700px;
-
+ margin-left:300px;
   background-color: #fff;
-  padding: 25px 30px;
+  padding: 35px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
@@ -30,7 +29,7 @@ body{
   font-size: 25px;
   font-weight: 500;
   position: relative;
-   color: black;
+  color:#00aaff;
 }
 .container .title::before{
   content: "";
@@ -40,6 +39,7 @@ body{
   height: 3px;
   width: 30px;
   border-radius: 5px;
+  
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 .content form .user-details{
@@ -51,13 +51,12 @@ body{
 form .user-details .input-box{
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
- 
 }
 form .input-box span.details{
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
-  color: black;
+  color:#00aaff;
 }
 .user-details .input-box input{
   height: 45px;
@@ -125,7 +124,7 @@ form .input-box span.details{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background-color:#00aaff;
  }
  form .button input:hover{
   /* transform: scale(0.99); */
@@ -155,45 +154,38 @@ form .user-details .input-box{
     flex-direction: column;
   }
 }
-
-</style>
-</head>
-
-    <body>
-       <div class="container">
-        <div class="title">Medicine</div>
+         </style>
+       </head>
+<body>
+<div class="container">
+        <div class="title">Suppliers</div>
         <div class="content">
-         <form action="Medicine">
+          <form action="supplier" method="POST">
             <div class="user-details">
               <div class="input-box">
-                <span class="details">Medicine Id:</span>
-                <input type="text" name ="medicineId" placeholder="Enter your Medicine Id" required>
+                <span class="details">Supplier Id:</span>
+                <input type="text" placeholder="Enter your supplier id" name="SupplierId" required>
               </div>
               <div class="input-box">
-                <span class="details">Medicine Name:</span>
-                <input type="text" name ="medicineName" placeholder="Enter your Medicine Name" required>
+                <span class="details">Supplier Name:</span>
+                <input type="text" placeholder="Enter your supplier name" name="SupplierName" required>
               </div>
               <div class="input-box">
-                <span class="details">Rate:</span>
-                <input type="text" name ="rate" placeholder="Enter your Rate" required>
+                <span class="details">Contact No:</span>
+                <input type="text" placeholder="Enter your contact no" name="ContactNumber" required>
               </div>
               <div class="input-box">
-                <span class="details">Manufacturer:</span>
-                <input type="text" name ="manufacturer" placeholder="Enter your Manufacturer" required>
+                <span class="details">Address:</span>
+                <input type="text" placeholder="Enter your address" name="Address" required>
               </div> 
-              <div class="input-box">
-                <span class="details">Expire Date:</span>
-                <input type="date" name ="expiryDate" placeholder="Enter your Expire Date" required>
-              </div> 
+             
           
             <div class="button">
-              <input type="submit" value ="Submit">
-          </div>
+              <input type="submit" value="Submit">
             </div>
           </form>
         </div>
       </div>
-       
-    
-    </body>
-	<%@include file="../jsp/modules/footer.jsp"%>
+</body>
+
+			<%@include file="../../jsp/modules/footer.jsp"%>
