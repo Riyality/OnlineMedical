@@ -503,9 +503,9 @@ Added by HTTrack<meta http-equiv="content-type" content="text/html;charset=utf-8
 					class="sidebar-link has-arrow waves-effect waves-dark"
 					href="javascript:void(0)" aria-expanded="false" style="color:black"><i
 						class="mdi mdi-receipt" style="color:black"></i><span class="hide-menu"
-						style="color: black; font-size: 20px; font-weight: 900;">Customer</a>
+						style="color: black; font-size: 20px; font-weight: 900;">Customers</span></a>
 					<ul aria-expanded="false" class="collapse  first-level"  style="background-color:white;">
-						<li class="sidebar-item"><a href="AddCustomer"
+						<li class="sidebar-item"><a href="customers"
 							class="sidebar-link"><i class="mdi mdi-note-outline"  style="color:black"></i><span
 								class="hide-menu"
 								style="color: black; font-size: 20px; font-weight: 900;">
