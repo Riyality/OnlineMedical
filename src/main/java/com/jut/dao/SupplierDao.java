@@ -51,5 +51,5 @@ public class SupplierDao {
 	Object []argument = {supplierId};
 	int result = template.update("delete from supplier where supplierId = ?",argument);
 	System.out.println(result);
-}
+   }
 }
