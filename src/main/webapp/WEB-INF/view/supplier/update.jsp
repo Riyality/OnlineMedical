@@ -9,10 +9,10 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Edit Medicine</h3>
+					<h3 class="page-title">Edit Suppliers</h3>
 					<ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="library.html">Medicine</a></li>
-						<li class="breadcrumb-item active">Edit Medicine</li>
+						<li class="breadcrumb-item"><a href="library.html">Supplier</a></li>
+						<li class="breadcrumb-item active">Edit Suppliers</li>
 					</ul>
 				</div>
 			</div>
@@ -29,14 +29,14 @@
 								
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label> Id <span class="login-danger">*</span></label> <input
+										<label> SupplierId <span style = "color:red" class="login-danger">*</span></label> <input
 											type="text" class="form-control" name="supplierId"
 											value="${param.supplierId }">
 									</div>
 								</div>
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label> Name<span class="login-danger">*</span></label> <input
+										<label>Supplier Name<span style = "color:red" class="login-danger">*</span></label> <input
 											type="text" class="form-control" name="supplierName"
 											value="${param.supplierName}">
 
@@ -44,7 +44,7 @@
 								</div>
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label>contactNumber<span class="login-danger">*</span></label>
+										<label>ContactNumber<span style = "color:red" class="login-danger">*</span></label>
 										<input type="text" class="form-control" name="contactNumber"
 											value="${param.contactNumber }">
 									</div>
@@ -53,7 +53,7 @@
 								
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label>address<span class="login-danger">*</span></label>
+										<label>Address<span style = "color:red" class="login-danger">*</span></label>
 										<input type="text" class="form-control" name="address"
 											value="${param.address }">
 									</div>

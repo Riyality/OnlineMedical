@@ -162,10 +162,7 @@ form .user-details .input-box{
         <div class="content">
           <form action="supplier" method="POST">
             <div class="user-details">
-              <div class="input-box">
-                <span class="details">Supplier Id:</span>
-                <input type="text" placeholder="Enter your supplier id" name="SupplierId" required>
-              </div>
+             
               <div class="input-box">
                 <span class="details">Supplier Name:</span>
                 <input type="text" placeholder="Enter your supplier name" name="SupplierName" required>
@@ -182,6 +179,7 @@ form .user-details .input-box{
           
             <div class="button">
               <input type="submit" value="Submit">
+            </div>
             </div>
           </form>
         </div>

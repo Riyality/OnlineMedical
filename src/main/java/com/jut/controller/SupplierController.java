@@ -29,7 +29,7 @@ public class SupplierController {
 		
 		supplierService. add(supplier);
 		
-		return "supplier/add";
+		return "redirect:/allsuppliers";
 	}
 	
 	@RequestMapping("/allsuppliers")
@@ -42,7 +42,7 @@ public class SupplierController {
 		
 	}
 	
-	@RequestMapping("update")
+	@RequestMapping("updatesSupplier")
 	public String update(){
 		return "supplier/update";
 	}

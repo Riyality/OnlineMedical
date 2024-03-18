@@ -224,14 +224,14 @@ form .user-details .input-box{
 								
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label> Id <span class="login-danger">*</span></label> <input
+										<label> Id <span style = "color:red"class="login-danger">*</span></label> <input
 											type="text" class="form-control" name="medicineId"
 											value="${param.medicineId }">
 									</div>
 								</div>
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label> Name<span class="login-danger">*</span></label> <input
+										<label> Name<span style = "color:red"class="login-danger">*</span></label> <input
 											type="text" class="form-control" name="medicineName"
 											value="${param.medicineName}">
 
@@ -239,7 +239,7 @@ form .user-details .input-box{
 								</div>
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label>rate<span class="login-danger">*</span></label>
+										<label>rate<span style = "color:red"class="login-danger">*</span></label>
 										<input type="text" class="form-control" name="rate"
 											value="${param.rate }">
 									</div>
@@ -248,14 +248,14 @@ form .user-details .input-box{
 								
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label>manufacturer <span class="login-danger">*</span></label>
+										<label>manufacturer <span style = "color:red" class="login-danger">*</span></label>
 										<input type="text" class="form-control" name="manufacturer"
 											value="${param.manufacturer }">
 									</div>
 								</div>
 								<div class="col-12 col-sm-4">
 									<div class="form-group local-forms">
-										<label>expiryDate <span class="login-danger">*</span></label> <input
+										<label>expiryDate <span style = "color:red" class="login-danger">*</span></label> <input
 											type="date" class="form-control" name="expiryDate"
 											value="${param.expiryDate }">
 									</div>

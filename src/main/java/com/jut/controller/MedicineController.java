@@ -26,7 +26,7 @@ public class MedicineController {
 	@RequestMapping("/Medicine")
 	public String add(@ModelAttribute Medicine medicine){
 		medicineService.add(medicine);
-		return "medicine/add";
+		return "redirect:/allmedicine";
 		
 	}
 	@RequestMapping("/allmedicine")
