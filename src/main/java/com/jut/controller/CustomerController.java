@@ -30,7 +30,7 @@ public class CustomerController {
 		
 		customerService. add(customer);
 		
-		return "customer/add";
+		return "redirect:/allCustomer";
 	}
 	
 	@RequestMapping("/allCustomer")
@@ -43,7 +43,7 @@ public class CustomerController {
 		
 	}
 	
-	@RequestMapping("updates")
+	@RequestMapping("updatesCustomer")
 	public String update(){
 		return "customer/update";
 	}

@@ -95,7 +95,7 @@ h3 {
 				<td>${cust.contactNumber}</td>
 			
 				<td data-th="Movie Title"><a
-					href="updates?customerId=${cust.customerId}&customerName=${cust.customerName}&contactNumber=${cust.contactNumber}">
+					href="updatesCustomer?customerId=${cust.customerId}&customerName=${cust.customerName}&contactNumber=${cust.contactNumber}">
 						<i class="fa-solid fa-pen-to-square"></i>
 				</a></td>
 				<td><a class="btn btn-sm bg-danger-light" href="#"

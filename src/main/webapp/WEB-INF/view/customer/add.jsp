@@ -162,10 +162,7 @@ form .user-details .input-box{
         <div class="content">
           <form action="customer" method="POST">
             <div class="user-details">
-              <div class="input-box">
-                <span class="details">Customer Id:</span>
-                <input type="text" placeholder="Enter your supplier id" name="CustomerId" required>
-              </div>
+             
               <div class="input-box">
                 <span class="details">Customer Name:</span>
                 <input type="text" placeholder="Enter your supplier name" name="CustomerName" required>
